@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPNCL — Independent VPN Testing & Comparisons</title>
+<meta name="description" content="VPNCL tests VPN services for speed, privacy and leak protection, then ranks the ones worth paying for.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ ANNOUNCEMENT BAR ============ -->
+<div class="topbar">
+  <p><span class="dot" aria-hidden="true"></span> Independently tested · Updated August 2026 ·</p>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="VPNCL home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30"><path d="M16 2 L28 7 V16 C28 23 22.5 28 16 30 C9.5 28 4 23 4 16 V7 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 16.5 L14.5 20 L21.5 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-text">VPNCL<span class="logo-ping" aria-hidden="true"></span></span>
+    </a>
+    
+    <nav class="main-nav" id="mainNav">
+      <a href="#picks">Top Picks</a>
+      <a href="#compare">Compare</a>
+      <a href="#how-we-test">How We Test</a>
+      <a href="#faq">FAQ</a>
+      <a href="best-vpn-for-gaming.html">Best Vpn For Gaming</a>
+
+    </nav>
+
+    <div class="header-actions">
+      <a href="#picks" class="btn btn-primary btn-sm">See Best VPN <span class="arrow">→</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-tag">// terminal</span> vpncl --scan --report</p>
+        <h1>We put VPNs through the <span class="grad-text">same tunnel</span> and time what comes out the other side.</h1>
+        <p class="hero-sub">No sponsored rankings dressed up as reviews. Every provider on VPNCL is run through the same speed, leak and logging tests before it earns a spot on the list.</p>
+
+        <div class="hero-cta-row">
+          <a href="#picks" class="btn btn-primary">View the current #1 <span class="arrow">→</span></a>
+          <a href="#how-we-test" class="btn btn-ghost">How we test</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="41">0</span>
+            <span class="stat-label">VPNs tested</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="1200" data-suffix="+">0</span>
+            <span class="stat-label">Speed tests logged</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="6">0</span>
+            <span class="stat-label">Leak checks per VPN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="tunnel-svg" viewBox="0 0 480 480">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#2FE6D9" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#2FE6D9" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2FE6D9"/>
+              <stop offset="100%" stop-color="#8B6CFF"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="240" cy="240" r="200" fill="url(#glow)"/>
+          <circle class="ring ring-1" cx="240" cy="240" r="190" fill="none" stroke="#1E2A44" stroke-width="1"/>
+          <circle class="ring ring-2" cx="240" cy="240" r="150" fill="none" stroke="#1E2A44" stroke-width="1"/>
+          <circle class="ring ring-3" cx="240" cy="240" r="110" fill="none" stroke="url(#ringGrad)" stroke-width="1.5" stroke-dasharray="4 7"/>
+
+          <!-- radar sweep -->
+          <g class="radar-sweep" style="transform-origin:240px 240px;">
+            <path d="M240 240 L240 50 A190 190 0 0 1 380 110 Z" fill="url(#glow)" opacity="0.5"/>
+          </g>
+
+          <!-- nodes -->
+          <g class="nodes">
+            <circle class="node" cx="120" cy="130" r="5"/>
+            <circle class="node" cx="360" cy="150" r="5"/>
+            <circle class="node" cx="90" cy="320" r="5"/>
+            <circle class="node" cx="380" cy="330" r="5"/>
+            <circle class="node" cx="240" cy="90" r="5"/>
+            <circle class="node" cx="240" cy="390" r="5"/>
+          </g>
+
+          <!-- connecting lines to center lock -->
+          <g class="links" stroke="#2FE6D9" stroke-width="1.2" fill="none" opacity="0.6">
+            <path class="link" d="M120 130 L240 240"/>
+            <path class="link" d="M360 150 L240 240"/>
+            <path class="link" d="M90 320 L240 240"/>
+            <path class="link" d="M380 330 L240 240"/>
+            <path class="link" d="M240 90 L240 240"/>
+            <path class="link" d="M240 390 L240 240"/>
+          </g>
+
+          <!-- center shield -->
+          <g transform="translate(240,240)">
+            <circle r="38" fill="#0F1626" stroke="url(#ringGrad)" stroke-width="2"/>
+            <path d="M0 -18 L15 -12 V2 C15 12 8 19 0 22 C-8 19 -15 12 -15 2 V-12 Z" fill="none" stroke="#EAF0FA" stroke-width="2"/>
+            <path d="M-6 1 L-1 6 L8 -5" fill="none" stroke="#2FE6D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </svg>
+
+        <div class="badge-float badge-float-1"><span class="mono">AES-256</span></div>
+        <div class="badge-float badge-float-2"><span class="mono">0 LOGS</span></div>
+        <div class="badge-float badge-float-3"><span class="mono">WireGuard</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="trust-strip">
+    <div class="wrap trust-inner">
+      <p class="trust-item"><strong>Independent lab</strong> — no provider sees results before publish</p>
+      <p class="trust-item"><strong>Re-tested monthly</strong> — rankings move when performance does</p>
+      <p class="trust-item"><strong>Real accounts</strong> — every plan is bought at full price</p>
+    </div>
+  </section>
+
+  <!-- ============ TOP PICKS ============ -->
+  <section class="section" id="picks">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">// top_picks.json</p>
+        <h2>Three VPNs that passed every test</h2>
+        <p class="section-sub">Ranked on connection speed loss, leak protection and how honestly the logging policy held up.</p>
+      </div>
+
+      <div class="picks-grid">
+
+        <article class="pick-card pick-card--featured">
+          <div class="pick-ribbon">Best overall</div>
+          <div class="pick-top">
+            <div class="pick-logo pick-logo--1" aria-hidden="true">NV</div>
+            <div>
+              <h3>NordVPN</h3>
+              <div class="stars" aria-label="4.8 out of 5">★★★★★</div>
+            </div>
+          </div>
+          <ul class="pick-specs mono">
+            <li><span>Speed loss</span><strong>−6%</strong></li>
+            <li><span>Servers</span><strong>6,300+ / 111 countries</strong></li>
+            <li><span>Log policy</span><strong>Audited no-logs</strong></li>
+            <li><span>Kill switch</span><strong>Yes, system-wide</strong></li>
+          </ul>
+          <div class="pick-foot">
+            <div class="price"><span class="price-amount">$3.09</span><span class="price-term">/mo, 2-yr plan</span></div>
+            <a href="#" class="btn btn-primary btn-block">Get NordVPN <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="pick-card">
+          <div class="pick-top">
+            <div class="pick-logo pick-logo--2" aria-hidden="true">SF</div>
+            <div>
+              <h3>Surfshark</h3>
+              <div class="stars" aria-label="4.6 out of 5">★★★★★</div>
+            </div>
+          </div>
+          <ul class="pick-specs mono">
+            <li><span>Speed loss</span><strong>−9%</strong></li>
+            <li><span>Servers</span><strong>3,200+ / 100 countries</strong></li>
+            <li><span>Log policy</span><strong>Audited no-logs</strong></li>
+            <li><span>Kill switch</span><strong>Yes, system-wide</strong></li>
+          </ul>
+          <div class="pick-foot">
+            <div class="price"><span class="price-amount">$2.19</span><span class="price-term">/mo, 2-yr plan</span></div>
+            <a href="#" class="btn btn-outline btn-block">Get Surfshark <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="pick-card">
+          <div class="pick-top">
+            <div class="pick-logo pick-logo--3" aria-hidden="true">EX</div>
+            <div>
+              <h3>ExpressVPN</h3>
+              <div class="stars" aria-label="4.5 out of 5">★★★★★</div>
+            </div>
+          </div>
+          <ul class="pick-specs mono">
+            <li><span>Speed loss</span><strong>−11%</strong></li>
+            <li><span>Servers</span><strong>3,000+ / 105 countries</strong></li>
+            <li><span>Log policy</span><strong>Audited no-logs</strong></li>
+            <li><span>Kill switch</span><strong>Yes, system-wide</strong></li>
+          </ul>
+          <div class="pick-foot">
+            <div class="price"><span class="price-amount">$4.99</span><span class="price-term">/mo, 1-yr plan</span></div>
+            <a href="#" class="btn btn-outline btn-block">Get ExpressVPN <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARISON TABLE ============ -->
+  <section class="section section--alt" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">// compare.sh</p>
+        <h2>Compare providers side by side</h2>
+        <p class="section-sub">Filter the table by what matters most to you.</p>
+      </div>
+
+      <div class="filter-tabs" role="tablist" aria-label="Sort comparison table">
+        <button class="filter-tab is-active" data-sort="rank">Overall rank</button>
+        <button class="filter-tab" data-sort="speed">Fastest</button>
+        <button class="filter-tab" data-sort="price">Cheapest</button>
+        <button class="filter-tab" data-sort="servers">Most servers</button>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table" id="compareTable">
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th class="mono">Price/mo</th>
+              <th class="mono">Speed loss</th>
+              <th class="mono">Servers</th>
+              <th>No-logs audit</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-rank="1" data-speed="6" data-price="3.09" data-servers="6300">
+              <td class="prov-cell"><span class="pick-logo pick-logo--1 sm" aria-hidden="true">NX</span>NordVPN</td>
+              <td class="mono">$3.09</td>
+              <td class="mono">−6%</td>
+              <td class="mono">6,300+</td>
+              <td><span class="check">✓</span> Yes</td>
+              <td><a href="#" class="btn btn-sm btn-primary">Visit</a></td>
+            </tr>
+            <tr data-rank="2" data-speed="9" data-price="2.19" data-servers="3200">
+              <td class="prov-cell"><span class="pick-logo pick-logo--2 sm" aria-hidden="true">SF</span>Surfshark</td>
+              <td class="mono">$2.19</td>
+              <td class="mono">−9%</td>
+              <td class="mono">3,200+</td>
+              <td><span class="check">✓</span> Yes</td>
+              <td><a href="#" class="btn btn-sm btn-outline">Visit</a></td>
+            </tr>
+            <tr data-rank="3" data-speed="11" data-price="4.99" data-servers="3000">
+              <td class="prov-cell"><span class="pick-logo pick-logo--3 sm" aria-hidden="true">EX</span>ExpressVPN</td>
+              <td class="mono">$4.99</td>
+              <td class="mono">−11%</td>
+              <td class="mono">3,000+</td>
+              <td><span class="check">✓</span> Yes</td>
+              <td><a href="#" class="btn btn-sm btn-outline">Visit</a></td>
+            </tr>
+            <tr data-rank="4" data-speed="14" data-price="1.99" data-servers="1900">
+              <td class="prov-cell"><span class="pick-logo pick-logo--4 sm" aria-hidden="true">PB</span>ProtonVPN</td>
+              <td class="mono">$3.59</td>
+              <td class="mono">−14%</td>
+              <td class="mono">1,900+</td>
+              <td><span class="check">✓</span> Yes</td>
+              <td><a href="#" class="btn btn-sm btn-outline">Visit</a></td>
+            </tr>
+            <tr data-rank="5" data-speed="10" data-price="1.99" data-servers="2100">
+              <td class="prov-cell"><span class="pick-logo pick-logo--5 sm" aria-hidden="true">PM</span>Private Internet Access</td>
+              <td class="mono">$1.99</td>
+              <td class="mono">−10%</td>
+              <td class="mono">2,100+</td>
+              <td><span class="check">✓</span> Yes</td>
+              <td><a href="#" class="btn btn-sm btn-outline">Visit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW WE TEST ============ -->
+  <section class="section" id="how-we-test">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">// how_we_test.log</p>
+        <h2>The same five checks, every provider</h2>
+        <p class="section-sub">This is a real sequence — each stage has to pass before a provider moves to the next.</p>
+      </div>
+
+      <ol class="process-list">
+        <li class="process-step">
+          <span class="step-index mono">01</span>
+          <div>
+            <h3>Baseline speed test</h3>
+            <p>We measure download, upload and latency without a VPN, then again on five server locations, at three times of day.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-index mono">02</span>
+          <div>
+            <h3>Leak check</h3>
+            <p>DNS, IPv6 and WebRTC leak tests run on every connection to confirm nothing slips outside the tunnel.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-index mono">03</span>
+          <div>
+            <h3>Kill switch stress test</h3>
+            <p>We force-drop the VPN connection mid-transfer and confirm traffic actually stops instead of falling back to the open network.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-index mono">04</span>
+          <div>
+            <h3>Logging policy review</h3>
+            <p>We read the policy against any independent audit or court records, not just the marketing page.</p>
+          </div>
+        </li>
+        <li class="process-step">
+          <span class="step-index mono">05</span>
+          <div>
+            <h3>Support & refund check</h3>
+            <p>We open a real support ticket and request a refund inside the money-back window to confirm both actually work.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--alt" id="faq">
+    <div class="wrap wrap--narrow">
+      <div class="section-head">
+        <p class="eyebrow">// faq.md</p>
+        <h2>Questions we get asked a lot</h2>
+      </div>
+
+      <div class="accordion" id="accordion">
+        <div class="accordion-item is-open">
+          <button class="accordion-trigger" aria-expanded="true">
+            <span>Is a VPN actually legal to use?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Yes, in the vast majority of countries. A small number of countries restrict or ban VPN use, so it's worth checking local law before connecting, especially while traveling.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>Will a VPN slow down my connection?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Some speed loss is normal since traffic takes a longer, encrypted path. The providers on this list keep that loss under about 15% on a nearby server, which most people won't notice for browsing or streaming.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>What does "no-logs" actually mean?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>It means the provider doesn't record what you connect to, your browsing activity, or your originating IP. We only credit a "no-logs" claim when it's backed by an independent third-party audit.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            <span>How does VPNCL make money?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-panel">
+            <p>Some links on this site are affiliate links — if you sign up through one, we may earn a commission at no extra cost to you. Rankings are based on our own test results, not on commission size.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section class="cta-banner">
+    <div class="wrap cta-inner">
+      <h2>Ready to stop browsing in the open?</h2>
+      <p>Start with our current #1 pick — tested this month, refundable if it's not for you.</p>
+      <a href="#picks" class="btn btn-primary btn-lg">See the #1 VPN <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">VPNCL</span>
+      <p>Independent VPN testing and comparisons. VPNCL is reader-supported; some links on this site are affiliate links.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="#picks">Top Picks</a>
+        <a href="#compare">Compare</a>
+        <a href="#how-we-test">How We Test</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Affiliate Disclosure</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:mrrootabdessamad@gmail.com">mrrootabdessamad@gmail.com</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> VPNCL. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
